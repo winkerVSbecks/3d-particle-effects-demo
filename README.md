@@ -1,5 +1,7 @@
 # 3d-particle-effects-demo
 
+![](public/demo.png)
+
 Code associated with the [Three ways to create 3D particle effects
 ](https://varun.ca/three-js-particles) post.
 
