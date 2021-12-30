@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css?family=Sulphur+Point&display=swap');
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow: hidden;
+  cursor: "url('https://raw.githubusercontent.com/chenglou/react-motion/master/demos/demo8-draggable-list/cursor.png') 39 39, auto";
+}
+
+#root {
+  overflow: auto;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #0c0f13;
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, 'avenir next', avenir,
+    'helvetica neue', helvetica, ubuntu, roboto, noto, 'segoe ui', arial,
+    sans-serif;
+  color: white;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(12, 15, 19, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 3rem;
+  line-height: 1;
+  margin: 0 0 1rem 0;
+  text-align: center;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #de77c7;
+}
+
+button {
+  color: #d998ee;
+  background-color: rgba(12, 15, 19, 0.75);
+  border: 1px solid #c06995;
+  border-radius: 4px;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.75rem;
+  line-height: 1;
+  margin: 0 auto;
+  display: block;
+}
+
+.loader {
+  color: #d998ee;
+  border-radius: 4px;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.75rem;
+  line-height: 1;
+  margin: 0 auto;
+  max-width: fit-content;
+  animation: opacityPulse 2s ease-out;
+  animation-iteration-count: infinite;
+  opacity: 1;
+}
+
+.attribution {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  left: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  font-size: 0.75rem;
+  color: #c6bff9;
+  opacity: 0.75;
+}
+
+a {
+  text-decoration: none;
+  font-size: 0.75rem;
+  color: #c6bff9;
+}
+
+a:hover {
+  color: #d998ee;
+}
+
+@keyframes opacityPulse {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
