@@ -9,7 +9,7 @@ import {
   arneodoAttractor,
   dequanAttractor,
   lorenzAttractor,
-  lorenzMod2Attractor
+  lorenzMod2Attractor,
 } from './attractor';
 
 const simulation = () =>
@@ -19,7 +19,7 @@ const simulation = () =>
     arneodoAttractor,
     dequanAttractor,
     lorenzAttractor,
-    lorenzMod2Attractor
+    lorenzMod2Attractor,
   ]);
 
 function FatLine({ radius, simulation, width, color }) {
@@ -43,12 +43,7 @@ function FatLine({ radius, simulation, width, color }) {
   return (
     <mesh>
       <meshLine ref={line} attach="geometry" points={positions} />
-      <meshLineMaterial
-        attach="material"
-        transparent
-        lineWidth={width}
-        color={color}
-      />
+      <meshLineMaterial transparent lineWidth={width} color={color} />
     </mesh>
   );
 }
@@ -62,7 +57,7 @@ export function SparkStorm({ count, colors, radius = 10 }) {
           width: Random.range(0.1, 0.2),
           speed: Random.range(0.001, 0.002),
           simulation: simulation(),
-          radius: Random.range(2, 2.25) * radius
+          radius: Random.range(2, 2.25) * radius,
         };
       }),
     [count, colors, radius]

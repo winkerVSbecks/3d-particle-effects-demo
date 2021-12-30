@@ -18,7 +18,6 @@ function FatLine({ curve, width, color, speed, animate, dash }) {
     <mesh>
       <meshLine attach="geometry" points={curve} />
       <meshLineMaterial
-        attach="material"
         ref={material}
         transparent
         depthTest={false}

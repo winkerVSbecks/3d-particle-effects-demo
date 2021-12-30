@@ -2,7 +2,7 @@ import * as THREE from 'three';
 import React from 'react';
 import { Canvas, extend } from '@react-three/fiber';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
-import { MeshLine, MeshLineMaterial } from './Meshline';
+import { MeshLine, MeshLineMaterial } from './MeshLine';
 import { Scene } from './Scene';
 import './styles.css';
 
