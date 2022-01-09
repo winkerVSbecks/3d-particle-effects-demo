@@ -38,13 +38,7 @@ export function Scene() {
         <group>
           <Planet />
           <SpaceDust count={10000} />
-          <Sparks
-            count={20}
-            width={1}
-            colors={colors.malevolentIllusion}
-            dash
-            animate
-          />
+          <Sparks count={20} colors={colors.malevolentIllusion} />
           <SparkStorm count={500} colors={colors.sunnyRainbow} />
         </group>
       </>

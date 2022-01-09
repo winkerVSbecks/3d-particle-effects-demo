@@ -7,8 +7,6 @@ export function SpaceDust({ count }) {
   const mesh = useRef();
   const light = useRef();
 
-  const dummy = useMemo(() => new THREE.Object3D(), []);
-
   // Generate some random positions, speed factors and timings
   const particles = useMemo(() => {
     const temp = [];
@@ -24,6 +22,8 @@ export function SpaceDust({ count }) {
     }
     return temp;
   }, [count]);
+
+  const dummy = useMemo(() => new THREE.Object3D(), []);
 
   useFrame(() => {
     // Run through the randomized data to calculate some movement

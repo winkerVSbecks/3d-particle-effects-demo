@@ -29,6 +29,7 @@ export function updateAttractor(currentPosition, scale, simulation, timeStep) {
 
 /**
  * Different attractor types
+ * https://fusefactory.github.io/openfuse/strange%20attractors/particle%20system/Strange-Attractors-GPU/
  */
 export function dadrasAttractor([x, y, z], timestep) {
   const a = 3;

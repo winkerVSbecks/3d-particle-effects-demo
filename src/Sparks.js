@@ -5,13 +5,11 @@ import Random from 'canvas-sketch-util/random';
 
 const radiusVariance = () => Random.range(0.2, 1);
 
-function FatLine({ curve, width, color, speed, animate, dash }) {
+function SparkLine({ curve, width, color, speed }) {
   const material = useRef();
 
   useFrame(() => {
-    if (animate) {
-      material.current.uniforms.dashOffset.value -= speed;
-    }
+    material.current.uniforms.dashOffset.value -= speed;
   });
 
   return (
@@ -23,14 +21,14 @@ function FatLine({ curve, width, color, speed, animate, dash }) {
         depthTest={false}
         lineWidth={width}
         color={color}
-        dashArray={dash ? 0.1 : undefined}
-        dashRatio={dash ? 0.95 : undefined}
+        dashArray={0.1}
+        dashRatio={0.95}
       />
     </mesh>
   );
 }
 
-export function Sparks({ count, colors, radius = 10, animate, dash }) {
+export function Sparks({ count, colors, radius = 10 }) {
   const lines = useMemo(
     () =>
       new Array(count).fill().map((_, index) => {
@@ -66,7 +64,7 @@ export function Sparks({ count, colors, radius = 10, animate, dash }) {
   return (
     <group position={[-radius * 2, -radius, -10]} scale={[1, 1.3, 1]}>
       {lines.map((props, index) => (
-        <FatLine key={index} animate={animate} dash={dash} {...props} />
+        <SparkLine key={index} {...props} />
       ))}
     </group>
   );

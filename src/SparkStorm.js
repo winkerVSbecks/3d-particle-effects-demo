@@ -22,7 +22,7 @@ const simulation = () =>
     lorenzMod2Attractor,
   ]);
 
-function FatLine({ radius, simulation, width, color }) {
+function StormLine({ radius, simulation, width, color }) {
   const line = useRef();
 
   useFrame(() => {
@@ -67,7 +67,7 @@ export function SparkStorm({ count, colors, radius = 10 }) {
     <group>
       <group>
         {lines.map((props, index) => (
-          <FatLine key={index} {...props} />
+          <StormLine key={index} {...props} />
         ))}
       </group>
     </group>
