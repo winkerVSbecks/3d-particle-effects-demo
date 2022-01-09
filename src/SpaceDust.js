@@ -27,7 +27,7 @@ export function SpaceDust({ count }) {
 
   useFrame(() => {
     // Run through the randomized data to calculate some movement
-    particles.forEach((particle, i) => {
+    particles.forEach((particle, index) => {
       let { factor, speed, x, y, z } = particle;
 
       // Update the particle time
@@ -49,7 +49,7 @@ export function SpaceDust({ count }) {
       dummy.updateMatrix();
 
       // And apply the matrix to the instanced item
-      mesh.current.setMatrixAt(i, dummy.matrix);
+      mesh.current.setMatrixAt(index, dummy.matrix);
     });
     mesh.current.instanceMatrix.needsUpdate = true;
   });
